@@ -212,7 +212,13 @@ return {
 		-- Python — basedpyright (type checking/completions) + ruff (lint/format)
 		-- --------------------------------------------------------
 		vim.lsp.config("basedpyright", {
-			root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+			root_markers = {
+				"pyproject.toml",
+				".git",
+				"setup.py",
+				"setup.cfg",
+				"requirements.txt",
+			},
 			settings = {
 				basedpyright = {
 					analysis = {
@@ -220,7 +226,7 @@ return {
 						venv = ".venv",
 						autoImportCompletions = true,
 						autoSearchPaths = true,
-						diagnosticMode = "openFilesOnly",
+						diagnosticMode = "workspace",
 						typeCheckingMode = "standard",
 					},
 					disableTaggedHints = true,
@@ -236,7 +242,6 @@ return {
 			end,
 		})
 		vim.lsp.enable("ruff")
-
 		-- --------------------------------------------------------
 		-- Lua (for editing this config)
 		-- --------------------------------------------------------
