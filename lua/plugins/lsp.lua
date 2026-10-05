@@ -222,8 +222,6 @@ return {
 			settings = {
 				basedpyright = {
 					analysis = {
-						venvPath = ".",
-						venv = ".venv",
 						autoImportCompletions = true,
 						autoSearchPaths = true,
 						diagnosticMode = "workspace",
