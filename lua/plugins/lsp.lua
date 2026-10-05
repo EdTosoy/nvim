@@ -90,19 +90,6 @@ return {
 				"nx.json",
 				"project.json",
 			},
-
-			on_new_config = function(config, root)
-				local probe = root .. "/node_modules"
-
-				config.cmd = {
-					"ngserver",
-					"--stdio",
-					"--tsProbeLocations",
-					probe,
-					"--ngProbeLocations",
-					probe,
-				}
-			end,
 		})
 		vim.lsp.enable("angularls")
 
